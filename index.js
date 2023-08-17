@@ -1,8 +1,10 @@
 const express = require ('express');
 const cors = require('cors');
+const dbconnection = require("./config/database")
 
 
 const app = express();
+dbconnection.connect()
 
 app.get("/",(req,res)=>{
     res.status(200).json({
